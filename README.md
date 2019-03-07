@@ -8,3 +8,4 @@ Method Requirements:
 Our method was running in MATLAB, so we required users to install MATLAB version on their operating systems.
 
 Usage:
+Our project contained several major measurements, such as global LOOCV, 5-fold CV, LODOCV and the ohmdd (perform on the old version HMDD v1.0 and validate on the latest version HMDD v2.0). 
