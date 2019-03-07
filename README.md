@@ -1,4 +1,4 @@
-# -SwMKL
+# SwMKL
 Self-weighted multi-kernel multi-label learning for potential miRNA-disease associations prediction
 
 Method Description:
