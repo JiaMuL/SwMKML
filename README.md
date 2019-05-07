@@ -27,6 +27,7 @@ All the datasets used in the code, i.e. miRNA functional similarity, disease sem
 There are three parameters alpha, beta and gamma in SwMKML. The default values for the three parameters are 1e-4, 10, 1, respectively. Users can change their value in "MultiKernelLearning.m" file.  
 
 **Output**
+
 The default output directory of SwMKML is under the same directory where the scripts locate and it can be changed in the 'caseStudy.m' and 'global_loocv.m' file accordingly. All the results are stored in '.mat' file for convenience. 
 
 **Contact**
