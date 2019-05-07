@@ -1,31 +1,34 @@
 # SwMKML
+
 Self-weighted multi-kernel multi-label learning for potential miRNA-disease associations prediction
 
 Please refer to the Readme.pdf file for more details.
 
-Method Description:
+**Method Description**
 
 We proposed a novel Self-weighted multi-kernel multi-label learning method for potential miRNA-disease associations prediction. We used multi-views, including several gaussian matrix calculated by gaussian kernel function and the miRNA functional similarity matrix as well as the disease semantic similarity matrix based on the latest version of MeSH descriptors and HMDD. We adopted a iterative and alternative optimization algorithm, and solved each of the variables separately by fixing other variables. Finally, the predicted miRNA-disease associations matrix was obtained by combining the miRNA space and disease space together.
 
-Method Requirements:
+**Method Requirements**
+
 Our method was running in MATLAB, so we required users to install MATLAB version on their operating systems.
 
-Usage:
-Our project contained several major measurements, such as global loocv, 5-fold cv, lodocv and the ohmdd (perform on the old version HMDD v1.0 and validate on the latest version HMDD v2.0). You could simply open the corresponding M files to verify the results in MATLAB programming environment and press the "Run" button. Please make sure that the input data "datasets" folder as well as these several evaluation metrices files are under the same directory. And please set up the local working directory on your own computer, then the output files are stored in the same working directory.
+**Usage**
 
-The output prediction file is shown below:
-miRNA disease association scores
-hsa-let-7a-1   Head and Neck Neoplasms  0.999793886
-hsa-let-7a-2   Head and Neck Neoplasms  0.999786375
-hsa-let-7a-3   Head and Neck Neoplasms  0.999787052
-hsa-let-7b     Head and Neck Neoplasms  0.999770004
-hsa-let-7c     Head and Neck Neoplasms  0.999754566
-hsa-let-7d     Head and Neck Neoplasms  0.999753530
-hsa-let-7e     Head and Neck Neoplasms  0.999761556
-hsa-let-7f-1   Head and Neck Neoplasms  0.999746466
-hsa-let-7f-2   Head and Neck Neoplasms  0.999751186
-hsa-let-7g     Head and Neck Neoplasms  0.999745392
-......
+We provided two functions, case study and global leave-one-out cross-validation (LOOCV), for users. To run the case study, please load the script 'caseStudy.m' into your MATLAB programming environment and click 'run'. To run global LOOCV, please load the script 'global_loocv.m' accordingly and other operations are the same as that of case study. Users can also run the scripts in standard command-line mode, where you should input the following commands for each function, respectively:
 
-Contact:
+matlab -nodisplay -nodesktop -nosplash -r "global_loocv;exit;"
+
+matlab -nodisplay -nodesktop -nosplash -r "caseStudy;exit;"
+
+All the datasets used in the code, i.e. miRNA functional similarity, disease semantic similarity and miRNA-disease associations are all provided in the corresponding 'datasets/*.mat'.
+
+**Parameters**
+
+There are three parameters alpha, beta and gamma in SwMKML. The default values for the three parameters are 1e-4, 10, 1, respectively. Users can change their value in "MultiKernelLearning.m" file.  
+
+**Output**
+The default output directory of SwMKML is under the same directory where the scripts locate and it can be changed in the 'caseStudy.m' and 'global_loocv.m' file accordingly. All the results are stored in '.mat' file for convenience. 
+
+**Contact**
+
 For any questions regarding our work, please feel free to contact us: wspzx9027@163.com.
